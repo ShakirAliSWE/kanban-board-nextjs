@@ -2,21 +2,18 @@
 import { useEffect, useState } from "react";
 import { Box, IconButton, Paper, Typography } from "@mui/material";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { Draggable } from "react-beautiful-dnd";
 
 import KanbanBoardCard from "./KanbanBoardCard";
 import { numberFormat } from "@/utils/number-format.utils";
-import DEFAULT_LEADS from "@/_mock/leads.json";
 
-const KanbanBoardColumn = ({ id, title }) => {
-  const [leads, setLeads] = useState([]);
+const KanbanBoardColumn = ({ id, title, leads = [] }) => {
   const [valuation, setValuation] = useState(0);
 
   useEffect(() => {
-    const filterLeads = DEFAULT_LEADS.filter((lead) => lead.funnelId === id);
-    const totalValudation = filterLeads.reduce((acc, lead) => acc + parseInt(lead.valuation), 0);
-    setLeads(filterLeads);
-    setValuation(totalValudation || 0);
-  }, []);
+    const totalValuation = leads.reduce((acc, lead) => acc + parseInt(lead.valuation), 0);
+    setValuation(totalValuation || 0);
+  }, [id]);
 
   return (
     <Box
@@ -44,14 +41,23 @@ const KanbanBoardColumn = ({ id, title }) => {
         </Box>
       </Box>
       <Box display={"flex"} flexDirection={"column"} gap={1}>
-        {leads.map((lead) => (
-          <KanbanBoardCard
-            key={lead.leadId}
-            title={lead.leadTitle}
-            ownerName={lead.ownerName}
-            valuation={numberFormat(lead.valuation)}
-            closingDate={lead.closingDate}
-          />
+        {leads.map((lead, index) => (
+          <Draggable key={lead.leadId} draggableId={String(lead.leadId)} index={index}>
+            {(provided) => (
+              <div
+                ref={provided.innerRef}
+                {...provided.draggableProps}
+                {...provided.dragHandleProps}
+              >
+                <KanbanBoardCard
+                  title={lead.leadTitle}
+                  ownerName={lead.ownerName}
+                  valuation={numberFormat(lead.valuation)}
+                  closingDate={lead.closingDate}
+                />
+              </div>
+            )}
+          </Draggable>
         ))}
       </Box>
     </Box>

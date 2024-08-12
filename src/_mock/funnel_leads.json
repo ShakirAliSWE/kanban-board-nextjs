@@ -1,0 +1,112 @@
+[
+  {
+    "funnelId": 1,
+    "funnelTitle": "New",
+    "leads": [
+      {
+        "leadId": 1,
+        "leadTitle": "Lead Title 1",
+        "ownerName": "Shakir Ali",
+        "funnelId": 1,
+        "valuation": "60000",
+        "closingDate": "17 May 2024"
+      },
+      {
+        "leadId": 6,
+        "leadTitle": "Lead Title 6",
+        "ownerName": "Sophia Wilson",
+        "funnelId": 1,
+        "valuation": "55000",
+        "closingDate": "18 June 2024"
+      }
+    ]
+  },
+  {
+    "funnelId": 2,
+    "funnelTitle": "Discovery",
+    "leads": [
+      {
+        "leadId": 2,
+        "leadTitle": "Lead Title 2",
+        "ownerName": "Jessica Smith",
+        "funnelId": 2,
+        "valuation": "85000",
+        "closingDate": "22 May 2024"
+      },
+      {
+        "leadId": 7,
+        "leadTitle": "Lead Title 7",
+        "ownerName": "James Anderson",
+        "funnelId": 2,
+        "valuation": "70000",
+        "closingDate": "25 June 2024"
+      }
+    ]
+  },
+  {
+    "funnelId": 3,
+    "funnelTitle": "Proposal",
+    "leads": [
+      {
+        "leadId": 3,
+        "leadTitle": "Lead Title 3",
+        "ownerName": "Michael Johnson",
+        "funnelId": 3,
+        "valuation": "95000",
+        "closingDate": "30 May 2024"
+      },
+      {
+        "leadId": 8,
+        "leadTitle": "Lead Title 8",
+        "ownerName": "Ava Martinez",
+        "funnelId": 3,
+        "valuation": "90000",
+        "closingDate": "02 July 2024"
+      }
+    ]
+  },
+  {
+    "funnelId": 4,
+    "funnelTitle": "Negotiations",
+    "leads": [
+      {
+        "leadId": 4,
+        "leadTitle": "Lead Title 4",
+        "ownerName": "Emily Davis",
+        "funnelId": 4,
+        "valuation": "75000",
+        "closingDate": "05 June 2024"
+      },
+      {
+        "leadId": 9,
+        "leadTitle": "Lead Title 9",
+        "ownerName": "Liam Taylor",
+        "funnelId": 4,
+        "valuation": "65000",
+        "closingDate": "10 July 2024"
+      }
+    ]
+  },
+  {
+    "funnelId": 5,
+    "funnelTitle": "Win",
+    "leads": [
+      {
+        "leadId": 5,
+        "leadTitle": "Lead Title 5",
+        "ownerName": "William Brown",
+        "funnelId": 5,
+        "valuation": "100000",
+        "closingDate": "12 June 2024"
+      },
+      {
+        "leadId": 10,
+        "leadTitle": "Lead Title 10",
+        "ownerName": "Isabella Thomas",
+        "funnelId": 5,
+        "valuation": "120000",
+        "closingDate": "20 July 2024"
+      }
+    ]
+  }
+]
