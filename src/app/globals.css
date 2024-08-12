@@ -1,0 +1,13 @@
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch;
+}
