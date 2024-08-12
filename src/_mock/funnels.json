@@ -1,0 +1,7 @@
+[
+  { "funnelId": 1, "funnelTitle": "New" },
+  { "funnelId": 2, "funnelTitle": "Discovery" },
+  { "funnelId": 3, "funnelTitle": "Proposal" },
+  { "funnelId": 4, "funnelTitle": "Negotiations" },
+  { "funnelId": 5, "funnelTitle": "Win" }
+]
