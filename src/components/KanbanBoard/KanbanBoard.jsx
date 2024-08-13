@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import KanbanBoardColumn from "./KanbanBoardColumn";
 import DEFAULT_FUNNEL_LEADS from "@/_mock/funnel_leads.json";
 
 const KanbanBoard = () => {
   const [funnelLeads, setFunnelLeads] = useState(DEFAULT_FUNNEL_LEADS);
+
   const onDragStart = (start) => {
     // console.log("~ Dragging started", start);
     // You can implement additional logic here if needed
