@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Box, IconButton, Paper, Typography } from "@mui/material";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { Draggable } from "react-beautiful-dnd";
+import { Draggable } from "@hello-pangea/dnd";
 
 import KanbanBoardCard from "./KanbanBoardCard";
 import { numberFormat } from "@/utils/number-format.utils";
@@ -69,6 +69,7 @@ const KanbanBoardColumn = ({ id, title, leads = [], onEditClick = null }) => {
                 {...provided.dragHandleProps}
               >
                 <KanbanBoardCard
+                  id={lead.leadId}
                   title={lead.leadTitle}
                   ownerName={lead.ownerName}
                   valuation={numberFormat(lead.valuation)}

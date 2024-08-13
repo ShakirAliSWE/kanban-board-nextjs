@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Box, Typography } from "@mui/material";
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import { DragDropContext, Droppable } from "@hello-pangea/dnd";
 import KanbanBoardColumn from "./KanbanBoardColumn";
 import DEFAULT_FUNNEL_LEADS from "@/_mock/funnel_leads.json";
 
@@ -48,7 +48,7 @@ const KanbanBoard = () => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
-      <Box display={"flex"} gap={2} overflowX={"auto"} p={1}>
+      <Box display={"flex"} gap={2} overflowx={"auto"} p={1}>
         {funnelLeads.map((funnel) => (
           <Droppable key={funnel.funnelId} droppableId={String(funnel.funnelId)}>
             {(provided) => (

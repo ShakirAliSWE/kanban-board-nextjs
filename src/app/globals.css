@@ -11,3 +11,7 @@ body {
   background-color: #fff;
   -webkit-overflow-scrolling: touch;
 }
+
+a {
+  text-decoration: none;
+}
