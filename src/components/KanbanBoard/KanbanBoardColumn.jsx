@@ -2,13 +2,31 @@
 import { useEffect, useState } from "react";
 import { Box, IconButton, Paper, Typography } from "@mui/material";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { Draggable } from "react-beautiful-dnd";
+import { Draggable } from "@hello-pangea/dnd";
 
 import KanbanBoardCard from "./KanbanBoardCard";
 import { numberFormat } from "@/utils/number-format.utils";
+import KanbanBoardColumnOptions from "./KanbanBoardColumnOptions";
 
-const KanbanBoardColumn = ({ id, title, leads = [] }) => {
+const KanbanBoardColumn = ({ id, title, leads = [], onEditClick = null }) => {
   const [valuation, setValuation] = useState(0);
+
+  ///////////////////////////////////////////////////
+  //  KANBAR BOARD COLUMN MENUS START
+  ///////////////////////////////////////////////////
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  ///////////////////////////////////////////////////
+  //  KANBAR BOARD COLUMN MENUS END
+  ///////////////////////////////////////////////////
 
   useEffect(() => {
     const totalValuation = leads.reduce((acc, lead) => acc + parseInt(lead.valuation), 0);
@@ -35,9 +53,10 @@ const KanbanBoardColumn = ({ id, title, leads = [] }) => {
           <Typography variant="caption">(${numberFormat(valuation)})</Typography>
         </Box>
         <Box>
-          <IconButton size="small">
+          <IconButton size="small" onClick={handleMenuOpen}>
             <BsThreeDotsVertical />
           </IconButton>
+          <KanbanBoardColumnOptions id={id} anchorEl={anchorEl} onClose={handleMenuClose} />
         </Box>
       </Box>
       <Box display={"flex"} flexDirection={"column"} gap={1}>
@@ -50,6 +69,7 @@ const KanbanBoardColumn = ({ id, title, leads = [] }) => {
                 {...provided.dragHandleProps}
               >
                 <KanbanBoardCard
+                  id={lead.leadId}
                   title={lead.leadTitle}
                   ownerName={lead.ownerName}
                   valuation={numberFormat(lead.valuation)}

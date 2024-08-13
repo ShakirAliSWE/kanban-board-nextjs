@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Box, IconButton, Paper, Typography } from "@mui/material";
 import { RiPencilFill } from "react-icons/ri";
 import { PiCurrencyDollarBold } from "react-icons/pi";
@@ -17,12 +18,19 @@ const KanbanBoardOption = ({ title, value, icon }) => {
   );
 };
 
-const KanbanBoardCard = ({ title, ownerName, valuation = null, closingDate = null }) => {
+const KanbanBoardCard = ({ id, title, ownerName, valuation = null, closingDate = null }) => {
   return (
-    <Box display={"flex"} flexDirection={"column"} bgcolor={"#FFF"} p={1} component={Paper}>
+    <Box
+      display={"flex"}
+      flexDirection={"column"}
+      bgcolor={"#FFF"}
+      p={1}
+      component={Paper}
+      sx={{ cursor: "pointer" }}
+    >
       <Box display={"flex"} flexGrow={1} justifyContent={"space-between"} alignItems={"center"}>
         <Typography fontWeight={500}>{title}</Typography>
-        <IconButton size="small">
+        <IconButton size="small" LinkComponent={Link} href={`/leads/edit/${id}`}>
           <RiPencilFill />
         </IconButton>
       </Box>
