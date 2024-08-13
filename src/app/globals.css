@@ -15,3 +15,22 @@ body {
 a {
   text-decoration: none;
 }
+
+/* Ensure month view rows scroll horizontally if needed */
+.rbc-month-view .rbc-month-row {
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  flex-wrap: nowrap; /* Prevent wrapping of events */
+}
+
+/* Ensure day slots do not overflow */
+.rbc-month-view .rbc-day-slot {
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Style for events to improve visibility */
+.rbc-month-view .rbc-event {
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}

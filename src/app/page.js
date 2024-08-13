@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import KanbanBoard from "@/components/KanbanBoard/KanbanBoard";
+import BigCalender from "@/components/BigCalender/BigCalender";
 import CustomToggleButtton from "@/components/Form/CustomToggleButtton";
 
 import { CiCalendar } from "react-icons/ci";
@@ -40,6 +41,7 @@ const HomePage = () => {
         />
       </Box>
       {selectedToggle === "kanban" && <KanbanBoard />}
+      {selectedToggle === "calender" && <BigCalender />}
     </Box>
   );
 };
