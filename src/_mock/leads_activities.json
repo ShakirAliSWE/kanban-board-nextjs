@@ -1,0 +1,82 @@
+[
+  {
+    "activityId": 1,
+    "title": "Client Meeting",
+    "subtitle": "15 Aug 2024, 09:30 to 10:00 (30 minutes)",
+    "taskPerformed": 3,
+    "taskPerformedAt": "28 May 2024",
+    "status": 1
+  },
+  {
+    "activityId": 2,
+    "title": "Product Launch Preparation",
+    "subtitle": "16 Aug 2024, 14:00 to 15:30 (1 hour 30 minutes)",
+    "taskPerformed": 5,
+    "taskPerformedAt": "29 May 2024",
+    "status": 0
+  },
+  {
+    "activityId": 3,
+    "title": "Team Sync",
+    "subtitle": "17 Aug 2024, 11:00 to 11:30 (30 minutes)",
+    "taskPerformed": 2,
+    "taskPerformedAt": "30 May 2024",
+    "status": 2
+  },
+  {
+    "activityId": 4,
+    "title": "Project Deadline",
+    "subtitle": "18 Aug 2024, 17:00 to 18:00 (1 hour)",
+    "taskPerformed": 4,
+    "taskPerformedAt": "31 May 2024",
+    "status": 4
+  },
+  {
+    "activityId": 5,
+    "title": "Client Feedback",
+    "subtitle": "19 Aug 2024, 10:00 to 11:00 (1 hour)",
+    "taskPerformed": 6,
+    "taskPerformedAt": "1 Jun 2024",
+    "status": 3
+  },
+  {
+    "activityId": 6,
+    "title": "Performance Review",
+    "subtitle": "20 Aug 2024, 14:00 to 15:00 (1 hour)",
+    "taskPerformed": 2,
+    "taskPerformedAt": "2 Jun 2024",
+    "status": 1
+  },
+  {
+    "activityId": 7,
+    "title": "System Maintenance",
+    "subtitle": "21 Aug 2024, 09:00 to 10:30 (1 hour 30 minutes)",
+    "taskPerformed": 1,
+    "taskPerformedAt": "3 Jun 2024",
+    "status": 0
+  },
+  {
+    "activityId": 8,
+    "title": "Marketing Strategy Meeting",
+    "subtitle": "22 Aug 2024, 13:00 to 14:00 (1 hour)",
+    "taskPerformed": 4,
+    "taskPerformedAt": "4 Jun 2024",
+    "status": 4
+  },
+  {
+    "activityId": 9,
+    "title": "Sales Report Analysis",
+    "subtitle": "23 Aug 2024, 15:00 to 16:00 (1 hour)",
+    "taskPerformed": 3,
+    "taskPerformedAt": "5 Jun 2024",
+    "status": 3
+  },
+  {
+    "activityId": 10,
+    "title": "Website Redesign",
+    "subtitle": "24 Aug 2024, 11:00 to 12:00 (1 hour)",
+    "taskPerformed": 5,
+    "taskPerformedAt": "6 Jun 2024",
+    "status": 2
+  }
+]

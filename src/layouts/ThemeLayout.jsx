@@ -1,12 +1,13 @@
 "use client";
-import { Container, CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import MainContainer from "@/components/Form/MainContainer";
 import theme from "@/theme/theme";
 
 const ThemeLayout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container fixed>{children}</Container>
+      <MainContainer>{children}</MainContainer>
     </ThemeProvider>
   );
 };

@@ -8,8 +8,17 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
-  background-color: #fff;
+  background-color: #f6f7f9;
   -webkit-overflow-scrolling: touch;
+}
+
+.hide-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 a {
