@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { DragDropContext, Droppable } from "@hello-pangea/dnd";
 import KanbanBoardColumn from "./KanbanBoardColumn";
+import KanbanBoardColumnEmpty from "./KanbanBoardColumnEmpty";
 import DEFAULT_FUNNEL_LEADS from "@/_mock/funnel_leads.json";
 
 const KanbanBoard = () => {
@@ -48,7 +49,7 @@ const KanbanBoard = () => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
-      <Box display={"flex"} gap={2} overflowx={"auto"} p={1}>
+      <Box display={"flex"} gap={2} p={1} sx={{ overflowX: "auto" }} className="hide-scroll">
         {funnelLeads.map((funnel) => (
           <Droppable key={funnel.funnelId} droppableId={String(funnel.funnelId)}>
             {(provided) => (
@@ -63,6 +64,7 @@ const KanbanBoard = () => {
             )}
           </Droppable>
         ))}
+        <KanbanBoardColumnEmpty />
       </Box>
     </DragDropContext>
   );
