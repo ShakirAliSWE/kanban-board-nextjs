@@ -1,0 +1,97 @@
+[
+  {
+    "leadId": 1,
+    "taskId": 1,
+    "questionId": 1,
+    "type": "number",
+    "name": "task1_number",
+    "questionTitle": "Enter the quantity",
+    "required": true,
+    "value": ""
+  },
+  {
+    "leadId": 1,
+    "taskId": 1,
+    "questionId": 2,
+    "type": "text",
+    "name": "task2_text",
+    "questionTitle": "Provide your feedback",
+    "required": true,
+    "value": ""
+  },
+  {
+    "leadId": 1,
+    "taskId": 1,
+    "questionId": 3,
+    "type": "radio",
+    "name": "task3_radio",
+    "questionTitle": "Select your gender",
+    "required": false,
+    "value": "",
+    "options": [
+      { "label": "Male", "value": "male" },
+      { "label": "Female", "value": "female" }
+    ]
+  },
+  {
+    "leadId": 1,
+    "taskId": 1,
+    "questionId": 4,
+    "type": "checkbox",
+    "name": "task4_checkbox",
+    "questionTitle": "Select your preferred options",
+    "required": true,
+    "value": "",
+    "options": [
+      { "label": "All of these", "value": "all" },
+      { "label": "Option 1", "value": "option1" },
+      { "label": "Option 2", "value": "option2" },
+      { "label": "Option 3", "value": "option3" }
+    ]
+  },
+  {
+    "leadId": 1,
+    "taskId": 1,
+    "questionId": 5,
+    "type": "select",
+    "name": "task5_select",
+    "questionTitle": "Choose your country",
+    "required": true,
+    "value": "",
+    "options": [
+      { "label": "United States", "value": "us" },
+      { "label": "Canada", "value": "ca" },
+      { "label": "United Kingdom", "value": "uk" }
+    ]
+  },
+  {
+    "leadId": 1,
+    "taskId": 1,
+    "questionId": 6,
+    "type": "textarea",
+    "name": "task6_textarea",
+    "questionTitle": "Provide additional comments",
+    "required": false,
+    "value": ""
+  },
+  {
+    "leadId": 1,
+    "taskId": 1,
+    "questionId": 7,
+    "type": "date",
+    "name": "task7_date",
+    "questionTitle": "Select the date",
+    "required": true,
+    "value": ""
+  },
+  {
+    "leadId": 1,
+    "taskId": 1,
+    "questionId": 8,
+    "type": "email",
+    "name": "task8_email",
+    "questionTitle": "Enter your email address",
+    "required": true,
+    "value": ""
+  }
+]
