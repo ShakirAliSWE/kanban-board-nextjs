@@ -1,6 +1,7 @@
 import { Avatar, Box, Button, Chip, Typography } from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 import BorderContainer from "../Form/BorderContainer";
+import Link from "next/link";
 
 const DEFAULT_STATUS = ["Pending", "Compled", "Rescheduled", "Cancelled", "Overdue"];
 const DEFAULT_STATUS_COLORS = ["info", "success", "warning", "error", "warning"];
@@ -53,7 +54,13 @@ const LeadActivityLog = ({
             </Button>
           )}
           {status !== 1 && (
-            <Button variant="outlined" size="small" endIcon={<IoIosArrowForward />}>
+            <Button
+              variant="outlined"
+              size="small"
+              endIcon={<IoIosArrowForward />}
+              LinkComponent={Link}
+              href="/leads/task/"
+            >
               Start Activity
             </Button>
           )}
