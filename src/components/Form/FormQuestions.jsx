@@ -6,7 +6,6 @@ import FormTextInput from "./FormTextInput";
 import FormTextArea from "./FormTextArea";
 import FormRadioGroup from "./FormRadioGroup";
 import FormCheckbox from "./FormCheckbox";
-import FormDropDown from "./FormDropDown";
 import FormMultiSelect from "./FormMultiSelect";
 import FormSingleSelect from "./FormSingleSelect";
 
@@ -25,7 +24,6 @@ const FormQuestions = ({ type, options = [], ...props }) => {
     case "checkbox":
       return <FormCheckbox name={name} options={options} />;
     case "select":
-      // return <FormDropDown name={name} options={options} />;
       return <FormSingleSelect name={name} options={options} />;
     case "multiselect":
       return <FormMultiSelect name={name} options={options} />;
