@@ -31,7 +31,7 @@ const KanbanBoardColumn = ({ id, title, leads = [], onEditClick = null }) => {
   useEffect(() => {
     const totalValuation = leads.reduce((acc, lead) => acc + parseInt(lead.valuation), 0);
     setValuation(totalValuation || 0);
-  }, [id]);
+  }, [leads.length]);
 
   return (
     <Box
